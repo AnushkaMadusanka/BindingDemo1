@@ -23,6 +23,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getCompany():Company{
-        return Company(1,"ABC Solutions","contact@abc.org")
+        return Company(1,"ABC Solutions","support@abc.org")
     }
 }
