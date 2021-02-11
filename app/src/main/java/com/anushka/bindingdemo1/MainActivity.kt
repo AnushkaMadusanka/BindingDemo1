@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.company = getCompany()
         binding.submitButton.setOnClickListener {
             displayGreeting()
         }
@@ -19,5 +20,9 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             greetingTextView.text = "Hello! " + nameEditText.text
         }
+    }
+
+    private fun getCompany():Company{
+        return Company(1,"ABC Solutions")
     }
 }
